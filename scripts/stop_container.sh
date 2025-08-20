@@ -1,3 +1,4 @@
 #!/bin/bash
 set -e
-containerid=$(sudo docker ps -q)
+containerid=$(docker ps -q)
+docker rm -f $containerid
