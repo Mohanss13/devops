@@ -1,3 +1,6 @@
 # VPC Demo for 2 tier app in private subnet
 
 https://youtu.be/FZPTL_kNvXc
+
+## To copy aws key from windows system to bastion host or jump host
+scp -i C:\Users\mohanss\Downloads\aws-key.pem C:\Users\mohanss\Downloads\aws-key.pem ubuntu@98.86.181.35:/home/ubuntu
