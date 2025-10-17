@@ -1,37 +1,15 @@
-# IMP CMD
+# Install EKS
 
-## To update kubeconfig
+Please follow the prerequisites doc before this.
 
-```
-aws eks update-kubeconfig --name demo-cluster --region us-east-1
-```
-
-## To get pods
+## Install using Fargate
 
 ```
-kubectl get pods -n game-2048
+eksctl create cluster --name demo-cluster --region us-east-1 --fargate
 ```
 
-## To watch pods
+## Delete the cluster
 
 ```
-kubectl get pods -n game-2048 -w
-```
-
-## To get service
-
-```
-kubectl get svc -n game-2048
-```
-
-## To get ingress
-
-```
-kubectl get ingress -n game-2048
-```
-
-## For windows(if curl is not working!)
-
-```
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json" -OutFile "iam_policy.json"
+eksctl delete cluster --name demo-cluster --region us-east-1
 ```
